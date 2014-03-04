@@ -1,9 +1,9 @@
-
 var user_schema = {
 	set_name : "" 
 };
 
 
+var Question = require('C:/Users/SHRIPADKESHAO/printf/schema');
 
 module.exports = function  ( app, db) {
 
