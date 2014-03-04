@@ -1,6 +1,6 @@
 
 
-var Question = require('C:/Users/SHRIPADKESHAO/printf/schema');
+var Question = require('../schema');
 var User = require('../models/user');
 module.exports = function  ( app, db) {
 
