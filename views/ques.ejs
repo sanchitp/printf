@@ -6,24 +6,22 @@
   </head>
   <body>
   <%count=0%>
-<% for( var i=0; i<3; i++) { %>
+<% for( var i=0; i<4; i++) { %>
         
-  <input type="button"	name="que<%=i+1%>" value="QUES <%= i+1 %>" />
-</br>
-    <%=question[i]%><br/>
+  <input type="button"  name="que<%=i+1%>" value="QUES <%= i+1 %>" />
+<br/><pre>
+<%=question[i]%>                              MARKS<%=marks[i]%></h4>
+      </pre>
+
   <% for( var k=0; k < 4; k++) { %>
           
         <input type='radio' name='answer<%=i+1%>' value='<%= k+1 %>' required />
         <%= k + 1%>. <%=option[count]%>
           <%count=count+1%>
       </br>
+       <% }%> 
+     </br>
 
-      <% }%> 
-
- <%}%>	
+ <%}%>  
   </body>
 </html>
-
-
-
-
