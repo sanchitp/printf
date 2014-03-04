@@ -5,9 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+  
+<form action='/submission' method='post'> 
   <%count=0%>
 <% for( var i=0; i<4; i++) { %>
-        
+      
   <input type="button"  name="que<%=i+1%>" value="QUES <%= i+1 %>" />
 <br/><pre>
 <%=question[i]%>                              MARKS<%=marks[i]%></h4>
@@ -23,5 +25,9 @@
      </br>
 
  <%}%>  
+    <input type="submit" name="button"/>
+      
+</form>
+
   </body>
 </html>

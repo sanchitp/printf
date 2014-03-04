@@ -47,6 +47,11 @@ var Qid;
 	app.post('/submission', function (req, res){
 
 
+				var opt1=req.param("answer1");
+				console.log(opt1);
+
+
+
 
 		res.redirect('/show_result');
 	});
