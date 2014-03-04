@@ -38,6 +38,7 @@ module.exports = function  ( app, db) {
 
 
 	app.get('/show_questions', is_logged_in,function (req, res){
+		var team_id = req.session.teamId;
 		var que=[];
 		var opt=[];
 		var marks=[];
