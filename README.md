@@ -23,6 +23,7 @@ schema:
 	type = list
 	feilds :
 	=====================================================================
+		
 		solutions[0] = index of solution of question:0
 													 |
 													 |
@@ -59,3 +60,12 @@ schema:
 	total_points          teamid:id
 								 |
 								 |------->   id as per in users table
+
+
+	========================  
+
+
+		OR IF YOU HAVE USED SOME OTHER NAME THEN EDIT THS FILE
+
+
+		
