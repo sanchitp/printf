@@ -1,9 +1,9 @@
-
+var Question = require('C:/Users/SHRIPADKESHAO/printf/schema');
 
 module.exports = function  ( app, db) {
 
 	app.get('/', function ( req, res){
-		res.render('front');
+		res.render('front',{title:'Printf'});
 	});
 
 
