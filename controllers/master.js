@@ -1,6 +1,6 @@
 
 
-var Question = require('../schema');
+var Question = require('../models/question');
 var User = require('../models/user');
 module.exports = function  ( app, db) {
 
@@ -38,35 +38,14 @@ module.exports = function  ( app, db) {
 
 
 	app.get('/show_questions', is_logged_in,function (req, res){
+		
 		var team_id = req.session.teamId;
-		var que=[];
-		var opt=[];
-		var marks=[];
-		var k=1;
-		var Qid;
-		var data;
-		for(i=0;i<4;i++){
-			!function syn(i){
-				Qid=i+1;
-				Question.getQuestion(Qid, function (err, question_data){
-					if( !err ){
-						opt.push(question_data[1]);
-						opt.push(question_data[2]);
-						opt.push(question_data[3]);
-						opt.push(question_data[4]);
-						marks.push(question_data[6]);
-						que.push(question_data[0]);
-						if(i==3){
-							res.render('ques',{title: 'printf()',question:que, option:opt,marks:marks});
-						}
-					}	
-					else{
-							console.log('inside /retrive while getQuestion');
-					}
-				});
-			}(i);
-		}
+		Question.retrieveQuestion(db, team_id, function(err, que, opt, marks){
+		res.render('printf', {tid :team_id, question :que, marks :marks, option :opt});
+			
+		});
 	});
+		
 
 	app.post('/submission', function (req, res){
 

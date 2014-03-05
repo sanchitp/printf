@@ -1,4 +1,4 @@
- var redis =require("redis");
+var redis =require("redis");
 var client =redis.createClient();
 client.on("error",function(err) {
 console.log("error is " + err);
