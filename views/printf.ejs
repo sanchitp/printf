@@ -1,13 +1,420 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title> printf()</title>
-		<meta charset="utf-8"> 
-		<link rel= 'stylesheet' href='bootstrap/css/bootstrap.min.css'  type='text/css'/>
-		<script src="js/all.js"></script>
-	</head>
-	<body>
-		<div class="container">
-			
-		</div>
-	</body>
+<head>
+  <title>
+    Printf
+  </title>
+  <link href="/bootstrap/css/printf.css" rel="stylesheet">
+  <script src="js/all.js"></script>
+  <script src="js/printf.js"></script>
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div>
+
+  <div class="bg-color div-height bottom"><br>
+  <img src="img/printf.png" class="img-responsive img-height"> 
+  </div><!-- img div-->
+
+  <div class="col-md-3 back" style="left-margin:0px">
+  <div class="colr div-border div-size1 bottom ul-padding font">
+    <center>QUESTION</center>
+  </div>
+  <div  class="div-border div-size colr">
+  <ul class=" nav list-unstyled colr" id="cssdropdown">
+    <li class="headlink ul-padding bottom colr " id="click1">
+    <center><a href="#" >SECTION 1</a></center>
+    <div id="cl1" class="undis colr ">
+    <center>
+    <ul class="nav list-unstyled ">
+        <%for (var i=0, i<15, i++) {%>
+        <li class="handle colr" data-handles="hq<%i%>"><a href="#"><span class="badge"><%i%></span>Question <%i%></a></li>
+        <%}%>
+      </ul>
+      </center>
+      </div>  
+    </li>
+    <li class="headlink ul-padding bottom colr"  id="click2">
+    <center><a href="#">SECTION 2</a></center>
+    <div class="undis colr" id="cl2">
+    <center>
+    <ul class="nav list-unstyled">
+      <li class="handle colr" data-handles="hq16"><a href="#"><span class="badge">1</span>Question 1</a></li>
+        <li class="handle colr" data-handles="hq17"><a href="#"><span class="badge">2</span>Question 2</a></li>
+        <li class="handle colr" data-handles="hq18"><a href="#"><span class="badge">3</span>Question 3</a></li>
+        <li class="handle colr" data-handles="hq19"><a href="#"><span class="badge">4</span>Question 4</a></li>
+        <li class="handle colr" data-handles="hq20"><a href="#"><span class="badge">5</span>Question 5</a></li>
+        <li class="handle colr" data-handles="hq21"><a href="#"><span class="badge">6</span>Question 6</a></li>
+        <li class="handle colr" data-handles="hq22"><a href="#"><span class="badge">7</span>Question 7</a></li>
+        <li class="handle colr" data-handles="hq23"><a href="#"><span class="badge">8</span>Question 8</a></li>
+        <li class="handle colr" data-handles="hq24"><a href="#"><span class="badge">9</span>Question 9</a></li>
+        <li class="handle colr" data-handles="hq25"><a href="#"><span class="badge">10</span>Question 10</a></li>
+        <li class="handle colr" data-handles="hq26"><a href="#"><span class="badge">11</span>Question 11</a></li>
+        <li class="handle colr" data-handles="hq27"><a href="#"><span class="badge">12</span>Question 12</a></li>
+        <li class="handle colr" data-handles="hq28"><a href="#"><span class="badge">13</span>Question 13</a></li>
+        <li class="handle colr" data-handles="hq29"><a href="#"><span class="badge">14</span>Question 14</a></li>
+        <li class="handle colr" data-handles="hq30"><a href="#"><span class="badge">15</span>Question 15</a></li>
+      </ul>
+      </center>
+      </div>
+    </li>
+  </ul>
+    
+  </div>  
+  </div><!--div4-->
+  <div class="col-md-9 que-color"><div class="que-div-size">
+  <div class="div-padding" id="ins">
+  <CENTER><p>INSTRUCTIONS</p></CENTER>
+  </BR>
+  <form role="form">
+  <P>1. </P><BR>
+  <P>2. </P><BR>
+  <P>3. </P><BR>
+  <P>4. </P><BR>
+  <P>5. </P><BR><!-- radio ends-->
+  </form> <br>
+  <div>
+  <center><input type="button" class="btn-sm btn-primary btn-info" name="b2" value="START" id="clk" /></center>
+  </div>
+  </div>
+
+  <div class="que-div-size">
+  <div class="content div-padding" data-text="hq1" id="qu1">
+  <p>QUESTION 1 <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> <br>
+  </div>
+  <div class="content div-padding" data-text="hq2">
+  <p>QUESTION 2 <BR>dgqdhqkjd kf, gkkg  kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div><!-- content ends-->
+  <div class="content div-padding " data-text="hq3">
+  <p>QUESTION 3 <br>dgqdhqkjd kf, gkkg  kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content  div-padding" data-text="hq4">
+  <p>QUESTION 4 dgqdhqkjd kf, gkkg  kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq5">
+  <p>QUESTION 5 <br>
+  dgqdhqkjd kf, gkkg  kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq6">
+  <p>QUESTION 6<br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq7">
+  <p>QUESTION 7<br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq8">
+  <p>QUESTION 8<br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq9">
+  <p>QUESTION 9<br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq10">
+  <p>QUESTION 10<br>dgqdhqkjd kf, gkkg  kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq11">
+  <p>QUESTION 11<br>dgqdhqkjd kf, gkkg  kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq12">
+  <p>QUESTION 12<<br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq13">
+  <p>QUESTION 13<br>dgqdhqkjd kf, gkkg  kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq14">
+  <p>QUESTION 14<br>dgqdhqkjd kf, gkkg  kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq15">
+  <p>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq16">
+  <p>QUESTION 16 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq17">
+  <p>QUESTION 17 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq18">
+  <p>QUESTION 18 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq19">
+  <p>QUESTION 19 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq20">
+  <p>QUESTION 20 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq21">
+  <p>QUESTION 21 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="h22">
+  <p>QUESTION 22 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq23">
+  <p>QUESTION 23 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq24">
+  <p>QUESTION 24 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq25">
+  <p>QUESTION 25 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq26">
+  <p>QUESTION 26 <br>dgqdhqkjd kf, gkkg kknk  knknknk kknknknknknk  <br> kdjnkndn nnknk nnnknknknk  knknk<br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq27">
+  <p>QUESTION 27 <br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq28">
+  <p>QUESTION 28 <br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq29">
+  <p>QUESTION 29 <br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  <div class="content div-padding" data-text="hq30">
+  <p>QUESTION 30 <br></p>
+  <form role="form">
+  <div class="form-group radio">
+  <input type="radio" name="que1" id="option1">aaa<br>
+  <input type="radio" name="que1" id="option2">bbb<br> 
+  <input type="radio" name="que1" id="option3">ccc<br>
+  <input type="radio" name="que1" id="option4">ddd<br> 
+  </div><!-- radio ends-->
+  </form> 
+  </div>
+  </div>
+  <div id="btn" class="undis">
+  <center><input type="button" class="btn-sm btn-primary btn-info" name="b2" value="SUBMIT" onclick="" /></center>
+  </div>
+  </div><!-- div-8-->
+</div><!--main div-->
+</body>
 </html>
