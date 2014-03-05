@@ -41,22 +41,15 @@ module.exports = function  ( app, db) {
 		
 		var team_id = req.session.teamId;
 		Question.retrieveQuestion(db, team_id, function(err, que, opt, marks){
-		res.render('printf', {tid :team_id, question :que, marks :marks, option :opt});
-			
+			res.render('printf', {tid:team_id, question:que, marks:marks, option:opt});
 		});
 	});
 		
 
 	app.post('/submission', function (req, res){
-
-
 				var opt1=req.param("answer1");
 				console.log(opt1);
-
-
-
-
-		res.redirect('/show_result');
+				res.redirect('/show_result');
 	});
 
 	app.get('/show_result', function (req, res){

@@ -13,8 +13,7 @@ body {
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 13px;
 	line-height: 1.5em; 
-	
-	background-image: url(low_contrast_linen.png);
+	background-color: #000;
 	background-repeat: repeat-x repeat-y;
 	background-position: top center;
 	
@@ -74,7 +73,6 @@ padding-bottom:10px;
 
 
 .que-color{
-	color: #fff;
 }
 
 .div-height{

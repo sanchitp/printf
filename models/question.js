@@ -33,6 +33,7 @@ module.exports.retrieveQuestion = function(db,team_id, callback){
 							opt.push(question_data[4]);
 							marks.push(question_data[6]);
 							que.push(question_data[0]);
+							
 							if(i==total_question_count-1){
 								callback(null, que, opt, marks);
 							}
