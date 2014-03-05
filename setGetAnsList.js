@@ -1,7 +1,9 @@
 var ansList = require("./ansSchema.js");	
-ques_no="1";
+var redis =require("redis");
+var db =redis.createClient();
+//ques_no="0";
 ques_ans="3";
-ansList.setAnswers(ques_no,ques_ans,function (err,data){
+ansList.setAnswers(db,ques_ans,function (err,data){
 if(!err){
 				console.log(data);
 			}else{
