@@ -1,24 +1,44 @@
-var user_schema = {
-	set_name : "" 
-};
 
 
-var Question = require('C:/Users/SHRIPADKESHAO/printf/schema');
-
+var Question = require('../schema');
+var User = require('../models/user');
 module.exports = function  ( app, db) {
 
 	app.get('/', function ( req, res){
-		res.render('login');
+		/* send the request to the start of the application page */ 
+		res.render('login', { title : 'login'});
 	});
 
+	/*  check the team_id credentials */
 
 	app.post('/signin', function ( req, res){
-		db.hget()
-		res.redirect('show_questions');
+		var team_id = req.param('user_name');
+		var team_password = req.param('user_password');
+		User.check_password( db, team_id, team_password, function ( err, result ){
+			if( !err ){
+				if( result == 1 ){
+					/*  if everything is alright   */
+					req.session.isLoggedIn = true;
+					req.session.teamId = team_id;
+					console.log('user ok! ' + req.session.isLoggedIn );
+					res.redirect('/show_questions');
+				}else if( result == 2){
+					/*  if password is wrong       */
+					res.render('login', { title : 'Wrong Password'} );
+				}else{
+					/*  if user does not exists    */
+					res.render('login', { title : 'Wrong Team Id'} );
+				}
+			}else{
+				console.log('ERR AT /signin WHILE CALLING check_password');
+				res.redirect('/');
+			}
+		});
 	});
 
 
-	app.get('/show_questions', function (req, res){
+	app.get('/show_questions', is_logged_in,function (req, res){
+		var team_id = req.session.teamId;
 		var que=[];
 		var opt=[];
 		var marks=[];
