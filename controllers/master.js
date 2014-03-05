@@ -2,6 +2,7 @@
 
 var Question = require('../models/question');
 var User = require('../models/user');
+var Evaluate = require('../models/evaluation'); 
 module.exports = function  ( app, db) {
 
 	app.get('/', function ( req, res){
@@ -47,9 +48,52 @@ module.exports = function  ( app, db) {
 		
 
 	app.post('/submission', function (req, res){
+<<<<<<< HEAD
 				var opt1=req.param("answer1");
 				console.log(opt1);
 				res.redirect('/show_result');
+=======
+
+
+				// var opt1=req.param("answer1");
+				// console.log(opt1);
+		var user_score=0;
+		var team_id = req.session.teamId;
+		var answer = [];
+		Evaluate.getMarks(db,function (err,marks){
+			Evaluate.getAnswers(db,function (err,correct_answers){
+			if(!err){
+
+				for(i=0;i<4;i++){
+					!function syn(i){
+						if(answer[i]==correct_answers[i])
+						{
+								user_score=user_score+marks[i];
+						}
+						if( i == 3 ){
+							Evaluate.setResult(db,team_id,user_score,function (err,data){
+									if(!err){
+										console.log("Score of"+data+"is stored");
+									}
+										else{
+											console.log(err);
+										}
+							});
+							res.redirect('/show_result');	
+						} 	
+					}(i);	
+				}
+				
+			}else{
+				console.log(err);
+			}
+		});
+	});
+
+
+
+		
+>>>>>>> 92abbe1cd5887c66ad4025294ec42f8f612b6e7a
 	});
 
 	app.get('/show_result', function (req, res){
