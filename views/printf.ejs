@@ -1,95 +1,184 @@
 <html>
-<head>
-  <title>
-    Printf
-  </title>
-  <link href="/bootstrap/css/printf.css" rel="stylesheet">
-  <script src="js/all.js"></script>
-  <script src="js/printf.js"></script>
-  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <%count=0%>
-    <%count1=0%>
-    <h2><%=tid%></h2>
-    
-<div>
+   <head>
+      <title>Printf</title>
+      <link href="bootstrap/css/printf.css" rel="stylesheet">
+      <script src="js/all.js"></script>
+      <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   </head>
+   <body class="bg-color">
+   <%count=0%>
+   <%count1=0%>
+   <h2 style="color: white"><%=tid%></h2>
+      <div>
+       <form role="form" action="/submission" method="post">
+         <div class="bg-color div-height bottom"><br>
+            <img src="/img/printf.png" class="img-responsive img-height">         
+         </div>
+         <!-- img div-->
+         <div class="col-md-3" style="left-margin:0px">
+            <div class="colr div-border div-size1 bottom ul-padding">
+               <center>QUESTIONS</center>
+            </div>
+            <div class="div-border div-size colr">
+               <ul class=" nav list-unstyled colr" id="cssdropdown">
+                  <li class="headlink ul-padding bottom colr " id="click1">
+                     <center><a href="#" >SECTION 1</a></center>
+                     <div id="cl1" class="undis ">
+                        <center>
+                           <ul class="nav list-unstyled ">
+                              
+                              <%for(var i=0; i< question.length/2; i++){%>
+                                <li class="handle" data-handles="<%= i+1%>"><a href="#"><span class="badge"></span>Question <%=i+1%></a></li>
+                                <%count++%>
+                                <%}%>
 
-  <div class="bg-color div-height bottom"><br>
-  <img src="img/printf.png" class="img-responsive img-height"> 
-  </div><!-- img div-->
+                           </ul>
+                        </center>
+                     </div>
+                  </li>
+                  <li class="headlink ul-padding bottom colr"  id="click2">
+                     <center><a href="#">SECTION 2</a></center>
+                     <div class="undis colr" id="cl2">
+                        <center>
+                           <ul class="nav list-unstyled">
+                              <%for (i=count; i<question.length; i++){%>
+                                <li class="handle colr" data-handles="<%=i+1%>"><a href="#"><span class="badge"></span>Question <%=i+1%></a></li>
+                                <%}%>
+                           </ul>
+                        </center>
+                     </div>
+                  </li>
+                  <li>
+                     <br><br><br><br>
+                     <center><input type="submit" class="btn btn-primary btn-lg bttn" name="b2" value="SUBMIT" onclick="check()" /></center>
+                  </li>
+               </ul>
+            </div>
+         </div><!--div3-->
+         <div class="col-md-7 colr">
+            <div class="div-padding-size que-div" id="ins">
+               <br><br><br>
+               <h4>
+                  <CENTER>
+                     <p>INSTRUCTIONS</p>
+                  </CENTER>
+               </h4>
+               <br><br><br>
 
-  <div class="col-md-3 back" style="left-margin:0px">
-  <div class="colr div-border div-size1 bottom ul-padding font">
-    <center>QUESTION</center>
-  </div>
-  <div  class="div-border div-size colr">
-  <ul class=" nav list-unstyled colr" id="cssdropdown">
-    <li class="headlink ul-padding bottom colr " id="click1">
-    <center><a href="#" >SECTION 1</a></center>
-    <div id="cl1" class="undis colr ">
-    <center>
+               <center>
 
-    <ul class="nav list-unstyled ">
-        <%for(var i=0; i< question.length/2; i++){%>
-        <li class="handle colr" data-handles="hq<%= i+1%>"><a href="#"><span class="badge"></span>Question <%=i+1%></a></li>
-        <%count++%>
-        <%}%>
-      </ul>
-      </center>
-      </div>  
-    </li>
-    <li class="headlink ul-padding bottom colr"  id="click2">
-    <center><a href="#">SECTION 2</a></center>
-    <div class="undis colr" id="cl2">
-    <center>
-    <ul class="nav list-unstyled">
-        <%for (i=count; i<question.length; i++){%>
-        <li class="handle colr" data-handles="hq<%=i+1%>"><a href="#"><span class="badge"></span>Question <%=i+1%></a></li>
-        <%}%>
-    </ul>
-    </center>
-    </div>
-    </li>
-  </ul>
-    
-  </div>  
-  </div><!--div4-->
-  <div class="col-md-9 que-color"><div class="que-div-size">
-  <div class="div-padding" id="ins">
-  <CENTER><p>INSTRUCTIONS</p></CENTER>
-  </BR>
-  <form role="form">
-  <P>1. </P><BR>
-  <P>2. </P><BR>
-  <P>3. </P><BR>
-  <P>4. </P><BR>
-  <P>5. </P><BR><!-- radio ends-->
-  </form> <br>
-  <div>
-  <center><input type="button" class="btn-sm btn-primary btn-info" name="b2" value="START" id="clk" /></center>
-  </div>
-  </div>
+               <input type="button" class=" btn btn-primary btn-lg bttn" name="b2" value="START" id="clk" /></center>
+                    </div>
+           
+               <%for(i=0;i<question.length;i++){%>
+                  <div class="content div-padding" data-text="<%=i+1%>" id="qu<%=i+1%>">
 
-  <div class="que-div-size">
-  <%for(i=0;i<question.length;i++) {%>
-  <div class="content div-padding" data-text="hq<%=i+1%>" id="qu<%=i+1%>">
-  <p>QUESTION <%=i+1%><br><%=question[i]%>           Marks : <%=marks[i]%><br></p>
-  <form role="form">
-  <div class="form-group radio">
-        <%for(var k=0;k<4;k++){%>
-        <input type="radio" name="que<%=i+1%>" id="option<%=k+1%>"><%=option[count1]%><br>
-        <%count1++%>
-        <%}%>
-  </div><!-- radio ends-->
-  </form> <br>
-  </div>
-  <%}%>
-  </div>
-  <div id="btn" class="undis">
-  <center><input type="button" class="btn-sm btn-primary btn-info" name="b2" value="SUBMIT" onclick="" /></center>
-  </div>
-  </div><!-- div-8-->
-</div><!--main div-->
-</body>
+                     <span>QUESTION <%=i+1%></span>
+                     <p>
+                        <br><%=question[i]%> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Marks : <%=marks[i]%><br>
+                     </p>
+                     <div class="form-group radio option">
+                        <%for(var k=0;k<4;k++){%>
+                             <input type="radio" name="que<%=i+1%>" id="option<%=k+1%>" value='<%=k+1%>'><%=option[count1]%><br>
+                             <%count1++%>
+                        <%}%>
+                     </div>
+                  </div>
+               <%}%>
+            </br>
+            <center>
+                <input type="button" class="btn btn-primary btn-lg bttn" id="next" value="NEXT"/>
+              </center>
+         
+         </div>
+         <div class="col-md-2 sponser">
+            <center>
+            <br><h4>OUR SPONSERS<br><h4>
+            <br>
+            <img src="img/Aniklogo.jpg" class="img-responsive spon-img"><br>
+            <img src="img/raymond.jpg" class="img-responsive spon-img"><br>
+            <img src="img/zootout.png" class="img-responsive spon-img"><br>
+            <img src="img/Ruchilogo.jpg" class="img-responsive spon-img"><br>
+            </center>
+         </div>
+         </form>
+      </div><!--main div-->
+      <script type="text/javascript">
+         $(document).ready(function(){
+             $("#next").hide();  
+
+
+           var i=1;
+           var current_data_handle = 1;
+           var len = parseInt(<%=question.length%>);
+           $("#click1").hover(function(){
+             $("#cl1").toggle();
+           });
+
+           $("#click2").hover(function(){
+             $("#cl2").toggle();
+           });
+
+           $(".handle").click(function(){
+             $("#ins").hide();
+             $('.content').css("display", "none");
+             current_data_handle = $(this).attr('data-handles');
+             $('.content[data-text="'+current_data_handle+'"]').css("display", "block");
+
+             
+            if(current_data_handle==len){
+               $("#next").hide();
+
+              } 
+            else {
+              
+              $("#next").show();
+            }
+           });
+
+           $("#clk").click(function(){
+             $("#ins").hide();
+             $("#qu1").show();
+             $("#next").show(); 
+             
+             if(i==len){
+               $("#next").hide();
+            }
+
+           });
+
+           $("#next").click(function(){ 
+            var len = parseInt(<%=question.length%>);
+            
+            $("#qu"+current_data_handle).hide();  
+             current_data_handle = parseInt(current_data_handle) + 1;
+            //new_data_handle++;
+            
+            $("#ins").hide();
+            $("#qu"+current_data_handle).show();
+            if(current_data_handle==len){
+               $("#next").hide();
+            }
+           });
+         });
+
+         function check()
+         {
+            if((document.getElementById('option1').checked)||(document.getElementById('option2').checked)||(document.getElementById('option3').checked)||(document.getElementById('option4').checked))
+            {
+               alert("SUCCESSFUL SUBMITTED");
+            }
+            else{
+               alert("NOT SUBMITTED");
+            }
+
+         }
+
+      </script>
+   </body>
 </html>
+
+<!--
+background-image: url(noisy_net.png);
+background-repeat: repeat-x repeat-y;	
+-->

@@ -62,12 +62,12 @@ module.exports.getMarks = function(db, callback) {
 }
 
 module.exports.setResult = function(db,userId,score,callback){
-	db.zadd(scoresSchema.set_name, userId , score,function (err,userId){
+	db.zadd(scoresSchema.set_name,score, userId ,function (err,userId){
 		if(!err){
 			callback(null,userId);
 		}
-			else{
-				callback(err,null);
-			}
+		else{
+			callback(err,null);
+		}
 	});
 }

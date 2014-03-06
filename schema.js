@@ -17,7 +17,7 @@ console.log("error is " + err);
 module.exports.setQuestion = function(ques_no,title,opt1,opt2,opt3,opt4,sol,score,callback) {
 	//if(!err) {
 
-		var id="ques:"+ques_no;
+		var id="question:"+ques_no;
 		client.rpush(id,title,function (err,data){
 			client.rpush(id,opt1,function (err,data){
 				client.rpush(id,opt2,function (err,data){
@@ -57,7 +57,7 @@ module.exports.setQuestion = function(ques_no,title,opt1,opt2,opt3,opt4,sol,scor
 
 module.exports.getQuestion=function(ques_no,callback) {
 var temp;
-temp=("ques:"+ques_no);
+temp=("question:"+ques_no);
 client.lrange(temp,0,-1,function(err,data){
 //client.lindex(temp,qschema.title, function (err,data){ 
 	if(!err){
@@ -76,7 +76,7 @@ client.lrange(temp,0,-1,function(err,data){
 
 module.exports.check=function(quesno,answer,callback){
 
-	var key = "ques:"+quesno;
+	var key = "question:"+quesno;
 	client.lrange(key,5,5,function(err,data){
 		if(!err){
 

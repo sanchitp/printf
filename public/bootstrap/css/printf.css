@@ -1,55 +1,59 @@
+/*@import url(http://fonts.googleapis.com/css?family=Inconsolata);*/
+/*@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);*/
+@import url(http://fonts.googleapis.com/css?family=Cutive+Mono);
+body {
+	margin: 0px;
+	padding: 0px;
+	line-height: 1.5em; 
+	background-color: #000;
+
+	background-position: top center;
+}
+
+.fnt{
+
+    /*font-family:'Inconsolata', sans-serif; */ 
+  /*  font-family: 'Share Tech Mono', sans-serif;*/
+  font-family: 'Cutive Mono', serif;
+
+
+	font-size: 16px;
+}
 .img-height{
 	height: 190px;
-	width:  260px;
+	width:  260px;6
 }
 .bg-color{
 	background-color: #000;
 }
-
-body {
-	margin: 0px;
-	padding: 0px;
-	color: #625e5e;
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 13px;
-	line-height: 1.5em; 
-	background-color: #000;
-	background-repeat: repeat-x repeat-y;
-	background-position: top center;
-	
+.sponser{
+	border-left: solid 1px;
+	border-color: #585858;
+	height: 565px;
+	color: #fff;
 }
-
-.content
-{
+.content{
 display: none;
 }
-
-.undis
-{
+.bttn{
+	color: #fff;
+	height: 40px;
+	width: 175px;
+}
+.undis{
 display: none;
 }
-
-.bottom
-{
+.bottom{
 	border-bottom: solid 1px;
-	border-color: #d5d5d5;
+	border-color: #585858;
 }
-
 .ul-padding{
 padding-top:15px;
 padding-bottom:15px;
-
-
 }
-
 .li-padding{
 padding-top:10px;
 padding-bottom:10px;
-}
-
-
-.que-div-size{
-	height: 400px;
 }
 .div-padding{
 	padding-left: 100px;
@@ -57,38 +61,33 @@ padding-bottom:10px;
 	padding-bottom: 20px;
 	padding-top: 50px;
 }
-
-.font{
-	font-size: 20px;
-}
-
-
-.back{
-	background-color: #000;
-}
 .div-size{
-	height: 550px;
-	
+	height: 505px;	
 }
-
-
-.que-color{
-}
-
 .div-height{
 	height: 100px;
 }
-
 .undis{
 	display: none;
 }
-
 .div-border{
 	border-right:solid 1px;
-	border-color: #d5d5d5;
+	border-color: #585858;
 	border-left: solid 1px;
 }
-
 .colr{
 	color: #fff;
+}
+p{
+	color: #3f6;
+}
+.option{
+	color: #cc3;
+}
+span{
+	color: #0099cc;
+}
+.spon-img{
+    height: 120px;
+    width: 120px;
 }

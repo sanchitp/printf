@@ -38,7 +38,7 @@ module.exports = function  ( app, db) {
 	});
 
 
-	app.get('/show_questions', is_logged_in,function (req, res){
+	app.get('/show_questions',is_logged_in ,function (req, res){
 		
 		var team_id = req.session.teamId;
 		Question.retrieveQuestion(db, team_id, function(err, que, opt, marks){
@@ -47,63 +47,42 @@ module.exports = function  ( app, db) {
 	});
 		
 
-	app.post('/submission', function (req, res){
-<<<<<<< HEAD
-				var opt1=req.param("answer1");
-				console.log(opt1);
-				res.redirect('/show_result');
-=======
-
-
-				// var opt1=req.param("answer1");
-				// console.log(opt1);
+	app.post('/submission', function (req, res) {
 		var user_score=0;
 		var team_id = req.session.teamId;
 		var answer = [];
-		Evaluate.getMarks(db,function (err,marks){
-			Evaluate.getAnswers(db,function (err,correct_answers){
-			if(!err){
-
-				for(i=0;i<4;i++){
-					!function syn(i){
-						if(answer[i]==correct_answers[i])
-						{
-								user_score=user_score+marks[i];
-						}
-						if( i == 3 ){
-							Evaluate.setResult(db,team_id,user_score,function (err,data){
+		Question.get_total_questions (db, function (err,result){
+			for(var i=0;i<result;i++){
+				answer.push(req.param('que'+ (i+1)));
+				if(i==result-1){
+					Evaluate.getMarks(db,function (err,marks){
+						Evaluate.getAnswers(db,function (err,correct_answers){
+							for(i=0;i<result;i++){
+								if(answer[i]==correct_answers[i]) user_score= parseInt(user_score) + parseInt(marks[i]);
+								if(i==result-1) Evaluate.setResult(db, team_id, user_score, function(err , data) {
 									if(!err){
-										console.log("Score of"+data+"is stored");
+										res.redirect('/show_result');
 									}
-										else{
-											console.log(err);
-										}
-							});
-							res.redirect('/show_result');	
-						} 	
-					}(i);	
+								});
+							}
+															
+						});
+					});
 				}
-				
-			}else{
-				console.log(err);
 			}
 		});
 	});
 
 
-
-		
->>>>>>> 92abbe1cd5887c66ad4025294ec42f8f612b6e7a
-	});
-
 	app.get('/show_result', function (req, res){
-
+		res.render('result');
 	});
 
 }
 
 
-function is_logged_in(req, res, next) {
+
+function is_logged_in (req, res, next) {
 
 	// if user is authenticated in the session, carry on 
 	if (req.session.isLoggedIn == true)
@@ -112,3 +91,28 @@ function is_logged_in(req, res, next) {
 	// if they aren't redirect them to the home page
 	res.redirect('/');
 }
+
+
+
+
+/*if(!err){
+								for(i=0;i<4;i++){
+									!function syn(i){
+										if(answer[i]==correct_answers[i]){
+												user_score=user_score+marks[i];
+										}
+										if( i == 3 ){
+											Evaluate.setResult(db,team_id,user_score,function (err,data){
+												if(!err){
+													console.log("Score of"+data+"is stored");
+												}
+												else{
+													console.log(err);
+												}
+											});
+											res.redirect('/show_result');	
+										} 	
+									}(i);	
+								}
+								
+							}*/
